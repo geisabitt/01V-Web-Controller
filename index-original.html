@@ -15,20 +15,20 @@
 </head>
 
 <body>
-    <div id="#">
+    <div id="orientation">
         <h1>Please use landscape orientation.</h1>
     </div>
     <button class="tablink" onclick="openPage('bank1', this, '#333')" id="defaultOpen">
-    Master
+    Channels 1 - 8
   </button>
     <button class="tablink" onclick="openPage('bank2', this, '#333')">
-    Live
+    Channels 9 - 16
   </button>
     <button class="tablink" onclick="openPage('bank3', this, '#333')">
-    Aux 2
+    Channels 17 - 24
   </button>
     <button class="tablink" onclick="openPage('bank4', this, '#333')">
-    Aux 3
+    Output Busses
   </button>
     <button class="tablink" onclick="openPage('pan', this, '#333')">
     Pan
@@ -43,82 +43,54 @@
 
     <div id="bank1" class="tabcontent container-fluid" style="overflow: hidden; overflow-y: hidden;">
         <div class="row" style="position: relative; top: 20%;">
-            <!-- Fader Canal 1-->
             <div class="col-sm">
                 <input id="1" type="range" class="slider" min="0" max="127" oninput="socket.emit('fader change', 1, this.value);" value="0" step="1" />
             </div>
-            <!-- Fader Canal 2-->
             <div class="col-sm">
                 <input id="2" type="range" class="slider" min="0" max="127" oninput="socket.emit('fader change', 2, this.value);" value="0" step="1" />
             </div>
-            <!-- Fader Canal 3-->
             <div class="col-sm">
                 <input id="3" type="range" class="slider" min="0" max="127" oninput="socket.emit('fader change', 3, this.value);" value="0" step="1" />
             </div>
-            <!-- Fader Canal 4-->
             <div class="col-sm">
                 <input id="4" type="range" class="slider" min="0" max="127" oninput="socket.emit('fader change', 4, this.value);" value="0" step="1" />
             </div>
-            <!-- Fader Canal 5-->
             <div class="col-sm">
                 <input id="5" type="range" class="slider" min="0" max="127" oninput="socket.emit('fader change', 5, this.value);" value="0" step="1" />
             </div>
-            <!-- Fader Canal 6-->
             <div class="col-sm">
                 <input id="6" type="range" class="slider" min="0" max="127" oninput="socket.emit('fader change', 6, this.value);" value="0" step="1" />
             </div>
-            <!-- Fader Canal 7-->
             <div class="col-sm">
                 <input id="7" type="range" class="slider" min="0" max="127" oninput="socket.emit('fader change', 7, this.value);" value="0" step="1" />
             </div>
-            <!-- Fader Canal 8 branco-->
             <div class="col-sm">
-                <input id="8" type="range" class="slider branco" min="0" max="127" oninput="socket.emit('fader change', 8, this.value);" value="0" step="1" />
-            </div>
-             <!-- Fader Canal 9 azul-->
-             <div class="col-sm">
-                <input id="9" type="range" class="slider azul" min="0" max="127" oninput="socket.emit('fader change', 9, this.value);" value="0" step="1" />
-            </div>
-            <!-- Fader Canal 10 amarelo-->
-            <div class="col-sm">
-                <input id="10" type="range" class="slider amarelo" min="0" max="127" oninput="socket.emit('fader change', 10, this.value);" value="0" step="1" />
-            </div>
-            <!-- Fader Canal 11 verde-->
-            <div class="col-sm">
-                <input id="11" type="range" class="slider verde" min="0" max="127" oninput="socket.emit('fader change', 11, this.value);" value="0" step="1" />
-            </div>
-            <!-- Fader Canal 12 Vermelho-->
-            <div class="col-sm">
-                <input id="12" type="range" class="slider vermelho" min="0" max="127" oninput="socket.emit('fader change', 12, this.value);" value="0" step="1" />
-            </div>            
-             <!--fader Master-->
-             <div class="col-sm">
-                <input id="37" type="range" class="slider main" min="0" max="127" oninput="socket.emit('fader change', 37, this.value);" value="0" step="1" />
+                <input id="8" type="range" class="slider" min="0" max="127" oninput="socket.emit('fader change', 8, this.value);" value="0" step="1" />
             </div>
             <div class="w-100"></div>
             <div class="col-sm" style="text-align: center;height: min-content;    top: -7%;">
                 <button type="button" class="btn btn-success" id="64" onclick="toggleMute('64')">
-          Violão
+          Ch 1
         </button>
             </div>
             <div class="col-sm" style="text-align: center;height: min-content;    top: -7%;">
                 <button type="button" class="btn btn-success" id="65" onclick="toggleMute('65')">
-          Teclado
+          Ch 2
         </button>
             </div>
             <div class="col-sm" style="text-align: center;height: min-content;    top: -7%;">
                 <button type="button" class="btn btn-success" id="66" onclick="toggleMute('66')">
-          Teclado
+          Ch 3
         </button>
             </div>
             <div class="col-sm" style="text-align: center;height: min-content;    top: -7%;">
                 <button type="button" class="btn btn-success" id="67" onclick="toggleMute('67')">
-          Guitarra
+          Ch 4
         </button>
             </div>
             <div class="col-sm" style="text-align: center;height: min-content;    top: -7%;">
                 <button type="button" class="btn btn-success" id="68" onclick="toggleMute('68')">
-          Baixo
+          Ch 5
         </button>
             </div>
             <div class="col-sm" style="text-align: center;height: min-content;    top: -7%;">
@@ -128,37 +100,12 @@
             </div>
             <div class="col-sm" style="text-align: center;height: min-content;    top: -7%;">
                 <button type="button" class="btn btn-success" id="70" onclick="toggleMute('70')">
-          Defeito
+          Ch 7
         </button>
             </div>
             <div class="col-sm" style="text-align: center;height: min-content;    top: -7%;">
                 <button type="button" class="btn btn-success" id="71" onclick="toggleMute('71')">
-          Branco
-        </button>
-            </div>
-            <div class="col-sm" style="text-align: center;height: min-content;    top: -7%;">
-                <button type="button" class="btn btn-success" id="72" onclick="toggleMute('72')">
-          Azul
-        </button>
-            </div>
-            <div class="col-sm" style="text-align: center;height: min-content;    top: -7%;">
-                <button type="button" class="btn btn-success" id="73" onclick="toggleMute('73')">
-          Amarelo
-        </button>
-            </div>
-            <div class="col-sm" style="text-align: center;height: min-content;    top: -7%;">
-                <button type="button" class="btn btn-success" id="74" onclick="toggleMute('74')">
-          Verde
-        </button>
-            </div>
-            <div class="col-sm" style="text-align: center;height: min-content;    top: -7%;">
-                <button type="button" class="btn btn-success" id="75" onclick="toggleMute('75')">
-          Vermelho
-        </button>
-            </div>
-            <div class="col-sm" style="text-align: center;height: min-content;    top: -7%;">
-                <button type="button" class="btn btn-success" id="95" onclick="toggleMute('95')">
-          Master
+          Ch 8
         </button>
             </div>
         </div>
@@ -166,143 +113,123 @@
 
     <div id="bank2" class="tabcontent container-fluid" style="overflow: hidden; overflow-y: hidden;">
         <div class="row" style="position: relative; top: 20%;">
-           
-            <!-- Fader par 25 CH1-->
+            <div class="col-sm">
+                <input id="9" type="range" class="slider" min="0" max="127" oninput="socket.emit('fader change', 9, this.value);" value="0" step="1" />
+            </div>
+            <div class="col-sm">
+                <input id="10" type="range" class="slider" min="0" max="127" oninput="socket.emit('fader change', 10, this.value);" value="0" step="1" />
+            </div>
+            <div class="col-sm">
+                <input id="11" type="range" class="slider" min="0" max="127" oninput="socket.emit('fader change', 11, this.value);" value="0" step="1" />
+            </div>
+            <div class="col-sm">
+                <input id="12" type="range" class="slider" min="0" max="127" oninput="socket.emit('fader change', 12, this.value);" value="0" step="1" />
+            </div>
             <div class="col-sm">
                 <input id="25" type="range" class="slider" min="0" max="127" oninput="socket.emit('fader change', 25, this.value);" value="0" step="1" />
             </div>
-            <!-- Fader par 13 CH2-->
             <div class="col-sm">
                 <input id="13" type="range" class="slider" min="0" max="127" oninput="socket.emit('fader change', 13, this.value);" value="0" step="1" />
             </div>
-            <!-- Fader par 17 CH3-->
-            <div class="col-sm">
-                <input id="17" type="range" class="slider" min="0" max="127" oninput="socket.emit('fader change', 17, this.value);" value="0" step="1" />
-            </div>
-            <!-- Fader par 18 CH4-->
-            <div class="col-sm">
-                <input id="18" type="range" class="slider" min="0" max="127" oninput="socket.emit('fader change', 18, this.value);" value="0" step="1" />
-            </div>
-            <!-- Fader par 19 CH5-->
-            <div class="col-sm">
-                <input id="19" type="range" class="slider" min="0" max="127" oninput="socket.emit('fader change', 19, this.value);" value="0" step="1" />
-            </div>
-            <!-- Fader par 20 ch6 -->
-            <div class="col-sm">
-                <input id="20" type="range" class="slider" min="0" max="127" oninput="socket.emit('fader change', 20, this.value);" value="0" step="1" />
-            </div>
-            <!-- Fader par 21 ch7-->
-            <div class="col-sm">
-                <input id="21" type="range" class="slider" min="0" max="127" oninput="socket.emit('fader change', 21, this.value);" value="0" step="1" />
-            </div>
-            <!-- Fader par 22 ch8-->
-            <div class="col-sm">
-                <input id="22" type="range" class="slider branco" min="0" max="127" oninput="socket.emit('fader change', 22, this.value);" value="0" step="1" />
-            </div>
-            <!-- Fader par 23 ch9-->
-            <div class="col-sm">
-                <input id="23" type="range" class="slider azul" min="0" max="127" oninput="socket.emit('fader change', 23, this.value);" value="0" step="1" />
-            </div>
-            <!-- Fader par 24 ch10-->
-            <div class="col-sm">
-                <input id="24" type="range" class="slider amarelo" min="0" max="127" oninput="socket.emit('fader change', 24, this.value);" value="0" step="1" />
-            </div>
-            <!-- Fader par 38 ch11-->
-            <div class="col-sm">
-                <input id="23" type="range" class="slider verde" min="0" max="127" oninput="socket.emit('fader change', 38, this.value);" value="0" step="1" />
-            </div>
-            <!-- Fader par 39 ch12-->
-            <div class="col-sm">
-                <input id="24" type="range" class="slider vermelho" min="0" max="127" oninput="socket.emit('fader change', 39, this.value);" value="0" step="1" />
-            </div>
-            <!--fader aux 1-->
-            <div class="col-sm">
-                <input id="28" type="range" class="slider aux" min="0" max="127" oninput="socket.emit('fader change', 28, this.value);" value="0" step="1" />
-            </div>
             <div class="w-100"></div>
-            
             <div class="col-sm" style="text-align: center;height: min-content;    top: -7%;">
-                <button type="button" class="btn btn-success" id="88">
-          Ch-1 Violão
-        </button>
-            </div>
-            <div class="col-sm" style="text-align: center;height: min-content;    top: -7%;">
-                <button type="button" class="btn btn-success" id="14">
-          Ch-2 Teclado
+                <button type="button" class="btn btn-success" id="72" onclick="toggleMute('72')">
+          Ch 9
         </button>
             </div>
             <div class="col-sm" style="text-align: center;height: min-content;    top: -7%;">
-                <button type="button" class="btn btn-success" id="80">
-          Ch-3 Teclado
+                <button type="button" class="btn btn-success" id="73" onclick="toggleMute('73')">
+          Ch 10
         </button>
             </div>
             <div class="col-sm" style="text-align: center;height: min-content;    top: -7%;">
-                <button type="button" class="btn btn-success" id="81">
-          Ch-4 Guitarra
+                <button type="button" class="btn btn-success" id="74" onclick="toggleMute('74')">
+          Ch 11
         </button>
             </div>
             <div class="col-sm" style="text-align: center;height: min-content;    top: -7%;">
-                <button type="button" class="btn btn-success" id="82">
-          Ch-5 Baixo
+                <button type="button" class="btn btn-success" id="75" onclick="toggleMute('75')">
+          Ch 12
         </button>
             </div>
             <div class="col-sm" style="text-align: center;height: min-content;    top: -7%;">
-                <button type="button" class="btn btn-success" id="83">
-          Ch-6
+                <button type="button" class="btn btn-success" id="88" onclick="toggleMute('88')">
+          Ch 13/14
         </button>
             </div>
             <div class="col-sm" style="text-align: center;height: min-content;    top: -7%;">
-                <button type="button" class="btn btn-success" id="84">
-          Ch-7 Defeito
+                <button type="button" class="btn btn-success" id="14" onclick="toggleMute('14')">
+          Ch 15/16
         </button>
             </div>
-            <div class="col-sm" style="text-align: center;height: min-content;    top: -7%;">
-                <button type="button" class="btn btn-success" id="85">
-          Ch-8 Branco
-        </button>
-            </div>
-            <div class="col-sm" style="text-align: center;height: min-content;    top: -7%;">
-                <button type="button" class="btn btn-success" id="86">
-          Ch-9 Azul
-        </button>
-            </div>
-            <div class="col-sm" style="text-align: center;height: min-content;    top: -7%;">
-                <button type="button" class="btn btn-success" id="87">
-          Ch-10 Amarelo
-        </button>
-            </div>
-            <div class="col-sm" style="text-align: center;height: min-content;    top: -7%;">
-                <button type="button" class="btn btn-success" id="86">
-          Ch-11 Verde
-        </button>
-            </div>
-            <div class="col-sm" style="text-align: center;height: min-content;    top: -7%;">
-                <button type="button" class="btn btn-success" id="87">
-          Ch-12 Vermelho
-        </button>
-            </div>
-             <div class="col-sm" style="text-align: center;height: min-content;    top: -7%;">
-                <button type="button" class="btn btn-success" id="91" onclick="toggleMute('91')">
-          Aux-1
-        </button>
-            </div>
-
-            
         </div>
     </div>
 
     <div id="bank3" class="tabcontent container-fluid" style="overflow: hidden; overflow-y: hidden;">
         <div class="row" style="position: relative; top: 20%;">
-            
-             <!--fader aux 2-->
-             <div class="col-sm">
-                <input id="29" type="range" class="slider aux" min="0" max="127" oninput="socket.emit('fader change', 29, this.value);" value="0" step="1" />
+            <div class="col-sm">
+                <input id="17" type="range" class="slider" min="0" max="127" oninput="socket.emit('fader change', 17, this.value);" value="0" step="1" />
+            </div>
+            <div class="col-sm">
+                <input id="18" type="range" class="slider" min="0" max="127" oninput="socket.emit('fader change', 18, this.value);" value="0" step="1" />
+            </div>
+            <div class="col-sm">
+                <input id="19" type="range" class="slider" min="0" max="127" oninput="socket.emit('fader change', 19, this.value);" value="0" step="1" />
+            </div>
+            <div class="col-sm">
+                <input id="20" type="range" class="slider" min="0" max="127" oninput="socket.emit('fader change', 20, this.value);" value="0" step="1" />
+            </div>
+            <div class="col-sm">
+                <input id="21" type="range" class="slider" min="0" max="127" oninput="socket.emit('fader change', 21, this.value);" value="0" step="1" />
+            </div>
+            <div class="col-sm">
+                <input id="22" type="range" class="slider" min="0" max="127" oninput="socket.emit('fader change', 22, this.value);" value="0" step="1" />
+            </div>
+            <div class="col-sm">
+                <input id="23" type="range" class="slider" min="0" max="127" oninput="socket.emit('fader change', 23, this.value);" value="0" step="1" />
+            </div>
+            <div class="col-sm">
+                <input id="24" type="range" class="slider" min="0" max="127" oninput="socket.emit('fader change', 24, this.value);" value="0" step="1" />
             </div>
             <div class="w-100"></div>
-            
             <div class="col-sm" style="text-align: center;height: min-content;    top: -7%;">
-                <button type="button" class="btn btn-success" id="92" onclick="toggleMute('92')">
-          Aux 2
+                <button type="button" class="btn btn-success" id="80" onclick="toggleMute('80')">
+          Ch 17
+        </button>
+            </div>
+            <div class="col-sm" style="text-align: center;height: min-content;    top: -7%;">
+                <button type="button" class="btn btn-success" id="81" onclick="toggleMute('81')">
+          Ch 18
+        </button>
+            </div>
+            <div class="col-sm" style="text-align: center;height: min-content;    top: -7%;">
+                <button type="button" class="btn btn-success" id="82" onclick="toggleMute('82')">
+          Ch 19
+        </button>
+            </div>
+            <div class="col-sm" style="text-align: center;height: min-content;    top: -7%;">
+                <button type="button" class="btn btn-success" id="83" onclick="toggleMute('83')">
+          Ch 20
+        </button>
+            </div>
+            <div class="col-sm" style="text-align: center;height: min-content;    top: -7%;">
+                <button type="button" class="btn btn-success" id="84" onclick="toggleMute('84')">
+          Ch 21
+        </button>
+            </div>
+            <div class="col-sm" style="text-align: center;height: min-content;    top: -7%;">
+                <button type="button" class="btn btn-success" id="85" onclick="toggleMute('85')">
+          Ch 22
+        </button>
+            </div>
+            <div class="col-sm" style="text-align: center;height: min-content;    top: -7%;">
+                <button type="button" class="btn btn-success" id="86" onclick="toggleMute('86')">
+          Ch 23
+        </button>
+            </div>
+            <div class="col-sm" style="text-align: center;height: min-content;    top: -7%;">
+                <button type="button" class="btn btn-success" id="87" onclick="toggleMute('87')">
+          Ch 24
         </button>
             </div>
         </div>
@@ -310,39 +237,30 @@
 
     <div id="bank4" class="tabcontent container-fluid" style="overflow: hidden; overflow-y: hidden;">
         <div class="row" style="position: relative; top: 20%;">
-            <!--fader aux 1-->
             <div class="col-sm">
                 <input id="28" type="range" class="slider aux" min="0" max="127" oninput="socket.emit('fader change', 28, this.value);" value="0" step="1" />
             </div>
-            <!--fader aux 2-->
             <div class="col-sm">
                 <input id="29" type="range" class="slider aux" min="0" max="127" oninput="socket.emit('fader change', 29, this.value);" value="0" step="1" />
             </div>
-            <!--fader aux 3-->
             <div class="col-sm">
                 <input id="30" type="range" class="slider aux" min="0" max="127" oninput="socket.emit('fader change', 30, this.value);" value="0" step="1" />
             </div>
-            <!--fader aux 4-->
             <div class="col-sm">
                 <input id="31" type="range" class="slider aux" min="0" max="127" oninput="socket.emit('fader change', 31, this.value);" value="0" step="1" />
             </div>
-            <!--fader bus 1-->
             <div class="col-sm">
                 <input id="33" type="range" class="slider bus" min="0" max="127" oninput="socket.emit('fader change', 33, this.value);" value="0" step="1" />
             </div>
-            <!--fader bus 2-->
             <div class="col-sm">
                 <input id="34" type="range" class="slider bus" min="0" max="127" oninput="socket.emit('fader change', 34, this.value);" value="0" step="1" />
             </div>
-            <!--fader bus 3-->
             <div class="col-sm">
                 <input id="35" type="range" class="slider bus" min="0" max="127" oninput="socket.emit('fader change', 35, this.value);" value="0" step="1" />
             </div>
-            <!--fader bus 4-->
             <div class="col-sm">
                 <input id="36" type="range" class="slider bus" min="0" max="127" oninput="socket.emit('fader change', 36, this.value);" value="0" step="1" />
             </div>
-            <!--fader Master-->
             <div class="col-sm">
                 <input id="37" type="range" class="slider main" min="0" max="127" oninput="socket.emit('fader change', 37, this.value);" value="0" step="1" />
             </div>
@@ -433,10 +351,10 @@
                 <webaudio-knob id="49" class="panpot" value="64" min="0" max="127" step="3"></webaudio-knob>
             </div>
             <div class="w-100"></div>
-            <div class="col-1" style="text-align: center;height: min-content; top: -7%;">
+            <div class="col-1" style="text-align: center;height: min-content; top: -7%;" onclick="document.getElementById('38').setValue(64, true);">
                 <p>Ch 1</p>
             </div>
-            <div class="col-1" style="text-align: center;height: min-content; top: -7%;">
+            <div class="col-1" style="text-align: center;height: min-content; top: -7%;" onclick="document.getElementById('39').setValue(64, true);">
                 <p>Ch 2</p>
             </div>
             <div class="col-1" style="text-align: center;height: min-content; top: -7%;" onclick="document.getElementById('40').setValue(64, true);">
@@ -547,7 +465,7 @@
     </div>
     <script src="./assets/js/jquery-3.5.1.min.js"></script>
     <script src="./assets/js/bootstrap.min.js"></script>
-    <!--script src="./assets/js/webaudio-controls.js"></script-->
+    <script src="./assets/js/webaudio-controls.js"></script>
     <script src="/socket.io/socket.io.js"></script>
     <script>
         function openPage(pageName, elmnt, color) {

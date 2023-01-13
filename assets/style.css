@@ -81,18 +81,57 @@ button:active {
   outline: none !important;
   border: none !important;
 }
+/*botão slider vermelho master*/
 .main::-webkit-slider-thumb {
   background: linear-gradient(90deg, #f86a69, #ab0101 25%, #ab0101 65%, #f05551 75%, #dc2828 92%, #fb9997 98%) content-box, linear-gradient(90deg, #ea5a5a, #ab0101, #ab0101, #e9292f) padding-box, linear-gradient(90deg, #e13d3c, #ab0101, #ab0101, #e82a2a) border-box !important;
   background-repeat: no-repeat;
   background-size: 100% 100%, 100% 100%, 100% calc(100% - .375em);
 }
+/*botão slider cinza bus*/
 .bus::-webkit-slider-thumb {
   background: linear-gradient(90deg, #d1d1d1, #5a5a5a 25%, #5a5a5a 65%, #d1d1d1 75%, #757575 92%, #d1d1d1 98%) content-box, linear-gradient(90deg, #d1d1d1, #5a5a5a, #5a5a5a, #757575) padding-box, linear-gradient(90deg, #d1d1d1, #5a5a5a, #5a5a5a, #757575) border-box !important;
   background-repeat: no-repeat;
   background-size: 100% 100%, 100% 100%, 100% calc(100% - .375em);
 }
+/*botão slider azul auxiliar*/
 .aux::-webkit-slider-thumb {
   background: linear-gradient(90deg, #78cdff, #0078da 25%, #0078da 65%, #1b9bd6 75%, #1b9bd6 92%, #78cdff 98%) content-box, linear-gradient(90deg, #1b9bd6, #0078da, #0078da, #1b9bd6) padding-box, linear-gradient(90deg, #1b9bd6, #0078da, #0078da, #1b9bd6) border-box !important;
+  background-repeat: no-repeat;
+  background-size: 100% 100%, 100% 100%, 100% calc(100% - .375em);
+}
+/*botão slider azul mic*/
+.azul::-webkit-slider-thumb {
+  background: linear-gradient(90deg, #78cdff, #004781 25%, #004781 65%, #1b9bd6 75%, #1b9bd6 92%, #78cdff 98%) content-box, linear-gradient(90deg, #1b9bd6, #004781, #004781, #1b9bd6) padding-box, linear-gradient(90deg, #1b9bd6, #004781, #004781, #1b9bd6) border-box !important;
+  background-repeat: no-repeat;
+  background-size: 100% 100%, 100% 100%, 100% calc(100% - .375em);
+}
+/*botão slider branco mic*/
+.branco::-webkit-slider-thumb {
+  background: linear-gradient(90deg, #d1d1d1, #e0e0e0 25%, #e0e0e0 65%, #d1d1d1 75%, #757575 92%, #d1d1d1 98%) content-box, linear-gradient(90deg, #d1d1d1, #e0e0e0, #e0e0e0, #757575) padding-box, linear-gradient(90deg, #d1d1d1, #e0e0e0, #e0e0e0, #757575) border-box !important;
+  background-repeat: no-repeat;
+  background-size: 100% 100%, 100% 100%, 100% calc(100% - .375em);
+}
+/*botão slider amarelo mic*/
+.amarelo::-webkit-slider-thumb {
+  background: linear-gradient(90deg, #fffd72, #ccc900 25%, #ccc900 65%, #fffd72 75%, #fffb00 92%, #fffd72 98%) content-box, linear-gradient(90deg, #fffd72, #ccc900, #ccc900, #fffb00) padding-box, linear-gradient(90deg, #fffd72, #ccc900, #ccc900, #fffb00) border-box !important;
+  background-repeat: no-repeat;
+  background-size: 100% 100%, 100% 100%, 100% calc(100% - .375em);
+}
+/*botão slider rosa mic*/
+.rosa::-webkit-slider-thumb {
+  background: linear-gradient(90deg, #ff9ee7, #ff51d4 25%, #ff51d4 65%, #ff9ee7 75%, #ff00bf 92%, #ff9ee7 98%) content-box, linear-gradient(90deg, #ff9ee7, #ff51d4, #ff51d4, #ff00bf) padding-box, linear-gradient(90deg, #ff9ee7, #ff51d4, #ff51d4, #ff00bf) border-box !important;
+  background-repeat: no-repeat;
+  background-size: 100% 100%, 100% 100%, 100% calc(100% - .375em);
+}
+/*botão slider verde mic*/
+.verde::-webkit-slider-thumb {
+  background: linear-gradient(90deg, #00c50a, #008507 25%, #008507 65%, #008507 75%, #44ff4d 92%, #008507 98%) content-box, linear-gradient(90deg, #008507, #008507, #008507, #44ff4d) padding-box, linear-gradient(90deg, #008507, #008507, #008507, #44ff4d) border-box !important;
+  background-repeat: no-repeat;
+  background-size: 100% 100%, 100% 100%, 100% calc(100% - .375em);
+}
+/*botão slider vermelho mic*/
+.vermelho::-webkit-slider-thumb {
+  background: linear-gradient(90deg, #f86a69, #ff0000 25%, #ff0000 65%, #f05551 75%, #dc2828 92%, #fb9997 98%) content-box, linear-gradient(90deg, #ea5a5a, #ff0000, #ff0000, #e9292f) padding-box, linear-gradient(90deg, #e13d3c, #ff0000, #ff0000, #e82a2a) border-box !important;
   background-repeat: no-repeat;
   background-size: 100% 100%, 100% 100%, 100% calc(100% - .375em);
 }
@@ -123,7 +162,7 @@ button:active {
   width: 30em;
   height: 0.5em;
   border-radius: 0.25em;
-  background: #000;
+  background: rgb(0, 0, 0);
 }
 .slider::-ms-track {
   border: none;
@@ -133,6 +172,7 @@ button:active {
   background: #000;
   color: transparent;
 }
+/*botão slider padrão*/
 .slider::-webkit-slider-thumb {
   position: relative;
   margin-top: -2.5em;
