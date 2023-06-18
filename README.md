@@ -25,6 +25,10 @@
 npm i @cdgco/01v-web-controller -g
 01vWebController
 ```
+## Icon in desktop 
+
+create Shortcut
+paste: 01vWebController
 
 ## Usage
 After launching 01V Web Controller, you will be shown a configuration window where you can choose your MIDI input, MIDI output and Web Server Port.
